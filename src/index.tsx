@@ -6,12 +6,15 @@ import { store } from './app/store';
 import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
 import Clothes from './Clothes'
-
+import Test from './Test'
+import Test2 from './Test2'
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       {/* <App /> */}
       <Clothes />
+      {/* <Test /> */}
+      {/* <Test2 /> */}
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')

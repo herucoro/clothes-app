@@ -5,20 +5,23 @@ import { MyInterface } from "./interfaces";
 function Clothes() {
     const [data, setData] = useState([])
     const [query, setQuery] = useState("1")
-    const [url, setUrl] = useState('http://127.0.0.1:8001/order/')
+    const [url, setUrl] = useState('http://127.0.0.1:8000/order/')
 
     useEffect(() => {
         const fetchData = async () => {
             const result = await axios.get(url)
-            setData(result.data)
+            .then(response => {setData(response.data);console.log(response.data)})
+            // setData(result.data)
+
         }
+        
         fetchData()
     }, [url])
 
     return (
         <Fragment>
             <form onSubmit={event => {
-                setUrl(`http://127.0.0.1:8001/order/${query}`);
+                setUrl(`http://127.0.0.1:8000/order/${query}/`);
                 event.preventDefault();
             }}>
             
