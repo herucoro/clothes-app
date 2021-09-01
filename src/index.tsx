@@ -5,16 +5,16 @@ import App from './App';
 import { store } from './app/store';
 import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
-import Clothes from './Clothes'
-import Test from './Test'
-import Test2 from './Test2'
+import Header from './components/header/Header'
+import Todo from './pages/todo'
+
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
+      {/* <Header /> */}
+      
       {/* <App /> */}
-      <Clothes />
-      {/* <Test /> */}
-      {/* <Test2 /> */}
+      <Todo />
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')
