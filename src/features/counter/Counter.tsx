@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Button } from '@material-ui/core';
 
 import { useAppSelector, useAppDispatch } from '../../app/hooks';
 import {
@@ -21,6 +22,13 @@ export function Counter() {
   return (
     <div>
       <div className={styles.row}>
+        <Button
+          className={styles.button}
+          aria-label="Decrement value"
+          onClick={() => dispatch(decrement())}
+        >
+          -
+        </Button>
         <button
           className={styles.button}
           aria-label="Decrement value"
